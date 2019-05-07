@@ -1,5 +1,13 @@
 import {ConcatSource} from "webpack-sources";
-import {bundleFiles} from "./lib/helpers";
+import * as fs from "fs";
+
+function bundleFiles(list) {
+    let content = "";
+    for (let i = 0; i < list.length; i++) {
+        content += fs.readFileSync(list[i], "utf-8") + "\n";
+    }
+    return content;
+}
 
 class BundleFilesPlugin {
     constructor(options = {}) {

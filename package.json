@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cross-env NODE_ENV=production babel src -d dist"
+    "build": "cross-env NODE_ENV=production babel src -o dist/bundle-files-webpack-plugin.js"
   },
   "repository": {
     "type": "git",
